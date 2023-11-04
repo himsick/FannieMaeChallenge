@@ -1,7 +1,7 @@
 import pandas as pd
  
 # Replace 'your_data.csv' with the path to your actual CSV file.
-file_path = 'algorithm.csv'
+file_path = 'HomeBuyer.csv'
  
 # Read the data from the CSV file
 df = pd.read_csv(file_path)
