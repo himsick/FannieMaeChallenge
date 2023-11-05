@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
+import Testimonial from './components/Testimonial';
 //import Faq from './components/Faq';
 //import Hero from './components/Hero';
 //import Form from './components/Form';
@@ -17,6 +18,7 @@ const App = () =>
     <div>
       <Navbar />
       <Form />
+      <Testimonial />
     </div>
   );
 };

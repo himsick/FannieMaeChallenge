@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { FiPlus } from "react-icons/fi";
 import React, { useState } from "react";
- 
-export const TabsFAQ = () => {
+
+export const Faq = () => {
   const [selected, setSelected] = useState(TABS[0]);
- 
+
   return (
     <section className="overflow-hidden bg-slate-900 px-4 py-12 text-slate-50">
       <Heading />
@@ -13,7 +13,7 @@ export const TabsFAQ = () => {
     </section>
   );
 };
- 
+
 const Heading = () => {
   return (
     <>
@@ -23,12 +23,12 @@ const Heading = () => {
         </span>
         <span className="mb-8 text-5xl font-bold">FAQs</span>
       </div>
- 
+
       <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-violet-600/20 to-indigo-600/20 blur-3xl" />
     </>
   );
 };
- 
+
 const Tabs = ({ selected, setSelected }) => {
   return (
     <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
@@ -62,7 +62,7 @@ const Tabs = ({ selected, setSelected }) => {
     </div>
   );
 };
- 
+
 const Questions = ({ selected }) => {
   return (
     <div className="mx-auto mt-12 max-w-3xl">
@@ -90,10 +90,10 @@ const Questions = ({ selected }) => {
     </div>
   );
 };
- 
+
 const Question = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
- 
+
   return (
     <motion.div
       animate={open ? "open" : "closed"}
@@ -142,9 +142,9 @@ const Question = ({ question, answer }) => {
     </motion.div>
   );
 };
- 
+
 const TABS = ["Web dev", "Mobile dev", "UI/UX", "Copywriting"];
- 
+
 const QUESTIONS = {
   "Web dev": [
     {
