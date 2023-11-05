@@ -15,7 +15,7 @@ function App () {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    fetch("/data").then(
+    fetch("/members").then(
       res => res.json()
     ).then(
       data => {

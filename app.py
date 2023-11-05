@@ -1,20 +1,17 @@
 
 # Import flask and datetime module for showing date and time
 from flask import Flask
-import datetime
- 
-x = datetime.datetime.now()
  
 # Initializing flask app
 app = Flask(__name__)
  
  
 # Route for seeing a data
-@app.route('/data')
-def data():
+@app.route('/members')
+def members():
  
     # Returning an api for showing in  reactjs
-    return {"data": ["data1", "data2", "data3"]}
+    return {"members": ["Member1", "Member2", "Member3"]}
 
  
      
