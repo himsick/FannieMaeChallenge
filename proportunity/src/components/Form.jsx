@@ -152,11 +152,29 @@ const Summary = ({ questions, setQuestions }) => {
     const formData = questions.reduce((acc, val) => {
       return { ...acc, [val.key]: val.value };
     }, {});
- 
-    // Send this data to your server or whatever :)
-    console.log(formData);
- 
-    setComplete(true);
+  
+    // Send this data to the Flask server for assessment
+    fetch("http://127.0.0.1:5173/assess", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log("Eligibility Response:", data);
+      // Now you have your eligibility response. You can do something with it.
+      // For example, set it in the state and display it in your component.
+      
+      alert(JSON.stringify(data, null, 2)); // This will show the data in a simple alert dialog box.
+      
+      
+      setComplete(true);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   };
  
   return (
@@ -268,20 +286,6 @@ const CurLine = ({
 export default TerminalContact;
  
 const QUESTIONS = [
-  {
-    key: "email",
-    text: "To start, could you give us ",
-    postfix: "your email?",
-    complete: false,
-    value: "",
-  },
-  {
-    key: "name",
-    text: "Awesome! And what's ",
-    postfix: "your name?",
-    complete: false,
-    value: "",
-  },
   {
     key: "creditScore",
     text: "To get started, could you share ",
