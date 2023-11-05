@@ -43,12 +43,12 @@ const Chatbot = () => {
     return (
         <>
             {/* Title container */}
-            <div className="title-container" id = "Chatbot">
-                Proportunity Chatbot
+            <div className="title-container"  id = "Chatbot">
+            <h3 className="text-5xl font-semibold text-center text-gray-800">Proportunity Chatbot</h3>
             </div>
             
             {/* Chat container */}
-            <div className="chat-container mx-auto my-8 p-6 rounded-2xl shadow-lg max-w-2xl">
+            <div className="chat-container mx-auto p-4 bg-gray-100 my-8 p-6 rounded-2xl shadow-lg max-w-2xl">
                 {/* Messages display area */}
                 <div className="messages flex flex-col space-y-2 p-3 max-h-96 overflow-y-auto">
                     {messages.map((message, index) => (
