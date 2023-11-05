@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Form from './components/Form';
 //import Faq from './components/Faq';
 //import Hero from './components/Hero';
 //import Form from './components/Form';
@@ -15,6 +16,7 @@ const App = () =>
   return(
     <div>
       <Navbar />
+      <Form />
     </div>
   );
 };
