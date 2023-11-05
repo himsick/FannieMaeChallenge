@@ -1,11 +1,9 @@
-/*
-File Name: App.jsx
-*/
-
 // Setup
-import React, { useState, useEffect } from 'react';
-//import Chatbot from './compnents/Chatbot';
-//import Footer from './compnents/Footer';
+import React, { useState } from 'react';
+import { Auth0Provider } from '@auth0/auth0-react'; // Import the Auth0Provider
+//import AuthLogin from './components/AuthLogin';
+
+// Component imports
 import Form from './components/Form';
 import Graph from './components/Graph';
 import Hero from './components/Hero';
@@ -43,27 +41,35 @@ function App() {
   };
 
   return(
-    <ScrollProvider>
-    <div>
-      <Navbar />
-      <Hero />
-      <Form onFormSubmit={handleFormSubmit} />
-      <Graph />
-      <Suggestions />
-      <Testimonial />
-      <Chatbot />
-      <TabsFAQ />
-      {isComplete && eligibility && (
-        <div className="eligibility-results">
-          <h2>Loan Eligibility Results:</h2>
-          <p>Credit Score Check: {eligibility.CreditScoreCheck}</p>
-          <p>LTV Status: {eligibility.LTV_Status}</p>
-          <p>DTI Status: {eligibility.DTI_Status}</p>
-          <p>FEDTI Status: {eligibility.FEDTI_Status}</p>
+    <Auth0Provider
+      domain={import.meta.env.VITE_AUTH0_DOMAIN} 
+      clientId={import.meta.env.VITE_AUTH0_CLIENT_ID} 
+      authorizationParams={{
+        redirect_uri: window.location.origin
+      }}
+    >
+      <ScrollProvider>
+        <div>
+          <Navbar />
+          <Hero />
+          <Form onFormSubmit={handleFormSubmit} />
+          <Graph />
+          <Suggestions />
+          <Testimonial />
+          <Chatbot />
+          <TabsFAQ />
+          {isComplete && eligibility && (
+            <div className="eligibility-results">
+              <h2>Loan Eligibility Results:</h2>
+              <p>Credit Score Check: {eligibility.CreditScoreCheck}</p>
+              <p>LTV Status: {eligibility.LTV_Status}</p>
+              <p>DTI Status: {eligibility.DTI_Status}</p>
+              <p>FEDTI Status: {eligibility.FEDTI_Status}</p>
+            </div>
+          )}
         </div>
-      )}
-    </div>
-    </ScrollProvider>
+      </ScrollProvider>
+    </Auth0Provider>
   );
 }
 

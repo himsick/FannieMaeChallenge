@@ -1,9 +1,9 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiMenu, FiArrowRight } from "react-icons/fi";
 import ProportunityLogo from '../assets/ProportunityLogo.png';
-import { useScroll } from './Scroll';
- 
+
 const FlipNavWrapper = () => {
   return (
     <div className="sticky top-0 bg-gray-50 z-10">
@@ -12,7 +12,7 @@ const FlipNavWrapper = () => {
     </div>
   );
 };
- 
+
 const FlipNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -23,7 +23,7 @@ const FlipNav = () => {
     </nav>
   );
 };
- 
+
 const Logo = () => {
   return (
     <img src={ProportunityLogo} alt="Logo" style={{
@@ -31,7 +31,7 @@ const Logo = () => {
         height: '52px',}} />
   );
 };
- 
+
 const NavLeft = ({ setIsOpen }) => {
   return (
     <div className="flex items-center gap-6">
@@ -54,7 +54,7 @@ const NavLeft = ({ setIsOpen }) => {
     </div>
   );
 };
- 
+
 const NavLink = ({ text }) => {
   const scrollToSectionWithOffset = (sectionId, offset = 150) => {
     const section = document.getElementById(sectionId);
@@ -82,28 +82,39 @@ const NavLink = ({ text }) => {
     </button>
   );
 };
- 
+
 const NavRight = () => {
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+
   return (
     <div className="flex items-center gap-4">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-sky-400 bg-clip-text text-transparent font-medium rounded-md whitespace-nowrap"
-      >
-        Sign in
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-sky-400 text-white font-medium rounded-md whitespace-nowrap"
-      >
-        Sign up
-      </motion.button>
+      {!isAuthenticated && (
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => loginWithRedirect()}
+          className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-sky-400 bg-clip-text text-transparent font-medium rounded-md whitespace-nowrap"
+        >
+          Sign in
+        </motion.button>
+      )}
+      {isAuthenticated && (
+        <>
+          <span className="text-gray-500">Welcome, {user.name}</span>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => logout({ returnTo: window.location.origin })}
+            className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-sky-400 text-white font-medium rounded-md whitespace-nowrap"
+          >
+            Sign out
+          </motion.button>
+        </>
+      )}
     </div>
   );
 };
- 
+
 const NavMenu = ({ isOpen }) => {
   return (
     <motion.div
@@ -119,7 +130,7 @@ const NavMenu = ({ isOpen }) => {
     </motion.div>
   );
 };
- 
+
 const MenuLink = ({ text }) => {
   return (
     <motion.a
@@ -140,9 +151,9 @@ const MenuLink = ({ text }) => {
     </motion.a>
   );
 };
- 
+
 export default FlipNavWrapper;
- 
+
 const menuVariants = {
   open: {
     scaleY: 1,
@@ -159,7 +170,7 @@ const menuVariants = {
     },
   },
 };
- 
+
 const menuLinkVariants = {
   open: {
     y: 0,
@@ -170,7 +181,7 @@ const menuLinkVariants = {
     opacity: 0,
   },
 };
- 
+
 const menuLinkArrowVariants = {
   open: {
     x: 0,
