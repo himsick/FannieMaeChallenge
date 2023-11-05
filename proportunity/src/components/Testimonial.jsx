@@ -2,12 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import {
-  SiAtlassian,
-  SiDribbble,
-  SiGrubhub,
-  SiKaggle,
-  SiSlack,
-  SiNike,
+  SiGithubsponsors,
 } from "react-icons/si";
 
 const StackedCardTestimonials = () => {
@@ -16,11 +11,9 @@ const StackedCardTestimonials = () => {
   return (
     <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden" >
       <div className="p-4">
-        <h3 className="text-5xl font-semibold">What our customers think</h3>
+        <h3 className="text-5xl font-semibold">Success Stories From Our Customers</h3>
         <p className="text-slate-500 my-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-          commodi sint, similique cupiditate possimus suscipit delectus illum
-          eos iure magnam!
+          Hear what our customers had to say after our life changing suggestions!
         </p>
         <SelectBtns
           numTracks={testimonials.length}
@@ -152,45 +145,45 @@ export default StackedCardTestimonials;
 
 const testimonials = [
   {
-    Icon: SiNike,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Jane Dodson",
-    title: "Marketing Director, Nike",
+      "Thanks to the guidance I received, focusing on paying down my existing debts significantly improved my debt-to-income ratio, making me a stronger candidate for a mortgage.",
+    name: "Russell Jordan",
+    title: "Los Angeles, CA",
   },
   {
-    Icon: SiAtlassian,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Johnathan Rodriguez",
-    title: "UX Research, Atlassian",
+    "Switching to a lower interest credit card helped me manage my debt more effectively, bringing me one step closer to purchasing my dream home.",
+    name: "Kyle Poole",
+    title: "Washington, DC",
   },
   {
-    Icon: SiDribbble,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Phil Heath",
-    title: "Staff Engineer, Dribbble",
+    "Adjusting my home search to more affordable options was a tough decision, but it was the right one to fit my financial reality and finally become a homeowner.",
+    name: "Victor Vassel",
+    title: "San Antonio, TX",
   },
   {
-    Icon: SiGrubhub,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Andrea Beck",
-    title: "Marketing Manager, GrubHub",
+    "Increasing my down payment was a challenge, but it paid off by broadening my loan options and helping me secure a lower interest rate.",
+    name: "Dillon James",
+    title: "Houston, TX",
   },
   {
-    Icon: SiKaggle,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Daniel Henderson",
-    title: "Engineering Manager, Kaggle",
+    "While renting longer wasn't my initial plan, it gave me the time needed to save and strengthen my financial position for a future home purchase.",
+    name: "Kelly Dinwidde",
+    title: "New Orleans, LA",
   },
   {
-    Icon: SiSlack,
+    Icon: SiGithubsponsors,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
-    name: "Anderson Lima",
-    title: "Product Manager, Slack",
+    "By focusing on saving a larger down payment, I not only secured better mortgage terms but also reduced my monthly financial burden.",
+    name: "Jayson Brown",
+    title: "Boston, MA",
   },
 ];

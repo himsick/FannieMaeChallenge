@@ -144,95 +144,73 @@ const Question = ({ question, answer }) => {
 
 export default TabsFAQ;
  
-const TABS = ["Web dev", "Mobile dev", "UI/UX", "Copywriting"];
+const TABS = ["Credit Score", "Down Payments", "LTV"];
  
 const QUESTIONS = {
-  "Web dev": [
+  "Credit Score": [
     {
-      question: "What is web development?",
+      question: "What is credit score important?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Your credit score impacts loan eligibility, interest rates, and the cost of your home loan.",
     },
     {
-      question: "How do I know if I need it?",
+      question: "How does it take to improve a credit score?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "It varies; some see improvements in a few months, while others with major issues may take years.",
     },
     {
-      question: "What does it cost?",
+      question: "What factors affect my credit score?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Payment history, credit utilization, length of credit history, types of credit, and recent credit inquiries.",
     },
     {
-      question: "What about SEO?",
+      question: "Will canceling credit cards improve my credit score?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
-    },
-  ],
-  "Mobile dev": [
-    {
-      question: "What is mobile development?",
-      answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
-    },
-    {
-      question: "Can you do both iOS and Android?",
-      answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
-    },
-    {
-      question: "Can you help with app store optimization?",
-      answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
-    },
-    {
-      question: "How long does it take?",
-      answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Not necessarily; it can sometimes hurt it by increasing your credit utilization ratio and shortening your credit history.",
     },
   ],
-  "UI/UX": [
+  "Down Payments": [
     {
-      question: "What is UI/UX?",
+      question: "What are the benefits of making a larger down payment?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "A larger down payment can lower your monthly mortgage payments, reduce or eliminate the need for mortgage insurance, and offer more competitive interest rates.",
     },
     {
-      question: "Can you audit my existing site?",
+      question: "How much down payment do I need to buy a house?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Typically, homebuyers are recommended to put down 20% of the home purchase price, but some loans allow for as little as 3-5% sometimes.",
     },
     {
-      question: "How do you perform research?",
+      question: "What types of funds can I use for a down payment?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "You can use savings, investments, gifts from family, or funds from down payment assistance programs. Some retirement accounts also allow you to use money for a first-time home purchase.",
     },
     {
-      question: "Does it make sense for my company?",
+      question: "Are there any drawbacks to putting down a smaller down payment?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "A smaller down payment often means larger monthly mortgage payments, potentially higher interest rates, and the additional cost of mortgage insurance.",
     },
   ],
-  Copywriting: [
+  "LTV": [
     {
-      question: "What is copywriting?",
+      question: "What is LTV?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "The Loan-to-Value (LTV) ratio is the percentage of a property's value that is mortgaged. It's calculated by dividing the mortgage amount by the property's appraised value.",
     },
     {
-      question: "Can you write my blog?",
+      question: "Can I still get a loan with a high LTV ratio?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Yes, it's possible, but it may come with higher interest rates, and you'll likely be required to purchase PMI, increasing your monthly costs.",
     },
     {
-      question: "Can you also help with ad design?",
+      question: "Can I lower my LTV ratio after purchasing a home?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "Yes, you can lower your LTV by making larger mortgage payments to reduce the principal or if your home value increases over time.",
     },
     {
-      question: "How much does it cost?",
+      question: "Why is a lower LTV ratio better for homebuyers?",
       answer:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+        "A lower LTV ratio can lead to better interest rates, lower mortgage payments, and the elimination of the need for private mortgage insurance (PMI).",
     },
   ],
 };
