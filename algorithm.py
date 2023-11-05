@@ -46,4 +46,22 @@ response = {
  
 # Print the response (or you can return this in your Flask API)
 print(response)
- 
+
+ # Calculate the percentage of non-approvals for each deciding factor
+total_records = 1  # Assuming there's only one user input in the DataFrame
+
+non_approval_factors = ['CreditScoreCheck', 'LTV_Status', 'DTI_Status', 'FEDTI_Status']
+
+non_approval_percentages = {}
+for factor in non_approval_factors:
+    non_approval_count = 0
+    for i in range(total_records):
+        if response[factor] != 'Pass':
+            non_approval_count += 1
+
+    non_approval_percentages[factor] = (non_approval_count / total_records) * 100
+
+# Print or use the non-approval percentages
+print("Non-Approval Percentages:")
+for factor, percentage in non_approval_percentages.items():
+    print(f"{factor}: {percentage:.2f}%")
