@@ -5,11 +5,8 @@ import Navbar from './components/Navbar';
 import Form from './components/Form';
 import Testimonial from './components/Testimonial';
 import Hero from './components/Hero';
-//import Faq from './components/Faq';
-//import Hero from './components/Hero';
-//import Form from './components/Form';
+import TabsFAQ from './components/TabsFAQ';
 //import Chatbot from './components/Chatbot';
-//import Testimonial from './components/Testimonial';
 //import Footer from './components/Footer';
 
 // App Function
@@ -21,6 +18,7 @@ const App = () =>
       <Hero />
       <Form />
       <Testimonial />
+      <TabsFAQ />
     </div>
   );
 };

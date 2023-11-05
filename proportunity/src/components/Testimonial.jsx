@@ -45,7 +45,7 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
           <button
             key={n}
             onClick={() => setSelected(n)}
-            className="h-1.5 w-full bg-slate-300 relative"
+            className="h-2 w-full bg-slate-300 relative"
           >
             {selected === n ? (
               <motion.span
