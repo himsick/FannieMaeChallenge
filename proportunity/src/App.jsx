@@ -1,11 +1,18 @@
-// App.js
+
+/*
+File Name: App.jsx
+*/
+
+// Setup
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
+//import Chatbot from './compnents/Chatbot';
+//import Footer from './compnents/Footer';
 import Form from './components/Form';
-import Testimonial from './components/Testimonial';
 import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 import TabsFAQ from './components/TabsFAQ';
+import Testimonial from './components/Testimonial';
+import { ScrollProvider } from './components/Scroll';
 
 function App() {
   const [eligibility, setEligibility] = useState(null);
@@ -33,7 +40,8 @@ function App() {
     });
   };
 
-  return (
+  return(
+    <ScrollProvider>
     <div>
       <Navbar />
       <Hero />
@@ -50,6 +58,7 @@ function App() {
         </div>
       )}
     </div>
+    </ScrollProvider>
   );
 }
 
