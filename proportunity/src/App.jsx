@@ -15,7 +15,8 @@ function App () {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    fetch("/members").then(
+    
+    fetch("http://127.0.0.1:5173/members").then(
       res => res.json()
     ).then(
       data => {

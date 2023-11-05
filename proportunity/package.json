@@ -1,7 +1,7 @@
 {
   "name": "proportunity",
   "private": true,
-  "proxy": "http://localhost:5173",
+  "proxy": "127.0.0.1:5173",
   "version": "0.0.0",
   "type": "module",
  
