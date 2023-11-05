@@ -149,12 +149,12 @@ const TABS = ["Credit Score", "Down Payments", "LTV"];
 const QUESTIONS = {
   "Credit Score": [
     {
-      question: "What is credit score important?",
+      question: "Why is credit score important?",
       answer:
         "Your credit score impacts loan eligibility, interest rates, and the cost of your home loan.",
     },
     {
-      question: "How does it take to improve a credit score?",
+      question: "How long does it take to improve a credit score?",
       answer:
         "It varies; some see improvements in a few months, while others with major issues may take years.",
     },
@@ -176,7 +176,7 @@ const QUESTIONS = {
         "A larger down payment can lower your monthly mortgage payments, reduce or eliminate the need for mortgage insurance, and offer more competitive interest rates.",
     },
     {
-      question: "How much down payment do I need to buy a house?",
+      question: "What down payment do I need to buy a house?",
       answer:
         "Typically, homebuyers are recommended to put down 20% of the home purchase price, but some loans allow for as little as 3-5% sometimes.",
     },

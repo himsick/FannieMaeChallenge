@@ -1,4 +1,3 @@
-
 /*
 File Name: App.jsx
 */
@@ -10,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Suggestions from './components/Suggestions';
 import TabsFAQ from './components/TabsFAQ';
 import Testimonial from './components/Testimonial';
 import { ScrollProvider } from './components/Scroll';
@@ -46,6 +46,7 @@ function App() {
       <Navbar />
       <Hero />
       <Form onFormSubmit={handleFormSubmit} />
+      <Suggestions />
       <Testimonial />
       <TabsFAQ />
       {isComplete && eligibility && (
