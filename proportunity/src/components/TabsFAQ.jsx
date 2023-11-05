@@ -17,7 +17,7 @@ const TabsFAQ = () => {
 const Heading = () => {
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center justify-center">
+      <div className="relative z-10 flex flex-col items-center justify-center" id="FAQ">
         <span className="mb-8 bg-gradient-to-r from-indigo-600 to-sky-400 bg-clip-text font-medium text-transparent">
         </span>
         <span className="mb-8 text-5xl font-bold">FAQs</span>

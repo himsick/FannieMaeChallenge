@@ -14,7 +14,7 @@ const StackedCardTestimonials = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden">
+    <section className="bg-white py-24 px-4 lg:px-8 grid items-center grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden" >
       <div className="p-4">
         <h3 className="text-5xl font-semibold">What our customers think</h3>
         <p className="text-slate-500 my-4">
@@ -80,7 +80,10 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
 
 const Cards = ({ testimonials, selected, setSelected }) => {
   return (
-    <div className="p-4 relative h-[450px] lg:h-[500px] shadow-xl">
+    <div 
+    className="p-4 relative h-[450px] lg:h-[500px] shadow-xl"
+    id="Testimonials"
+    >
       {testimonials.map((t, i) => {
         return (
           <Card

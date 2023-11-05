@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import { Fragment, useEffect, useRef, useState } from "react";
+
  
 const TerminalContact = () => {
   const containerRef = useRef(null);
@@ -8,9 +9,10 @@ const TerminalContact = () => {
  
   return (
     <section
+      id="Form"
       style={{
         backgroundImage:
-          "url(https://images.hdqwalls.com/wallpapers/hut-house-landscape-minimal-morning-4k-pj.jpg)",
+          "url(https://images.unsplash.com/photo-1619252584172-a83a949b6efd?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D)",
         backgroundSize: "cover",
         backgroundPosition: "center calc(100% + 130px)",
       }}

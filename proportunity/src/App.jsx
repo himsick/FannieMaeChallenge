@@ -1,18 +1,23 @@
+/*
+File Name: App.jsx
+*/
+
 // Setup
 import React, { useState } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
+//import Chatbot from './compnents/Chatbot';
+//import Footer from './compnents/Footer';
 import Form from './components/Form';
-import Testimonial from './components/Testimonial';
 import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 import TabsFAQ from './components/TabsFAQ';
-//import Chatbot from './components/Chatbot';
-//import Footer from './components/Footer';
+import Testimonial from './components/Testimonial';
+import { ScrollProvider } from './components/Scroll';
 
-// App Function
+// App Implementation
 const App = () =>
 {
   return(
+    <ScrollProvider>
     <div>
       <Navbar />
       <Hero />
@@ -20,6 +25,7 @@ const App = () =>
       <Testimonial />
       <TabsFAQ />
     </div>
+    </ScrollProvider>
   );
 };
 

@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiMenu, FiArrowRight } from "react-icons/fi";
 import ProportunityLogo from '../assets/ProportunityLogo.png';
+import { useScroll } from './Scroll';
  
 const FlipNavWrapper = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="sticky top-0 bg-gray-50 z-10">
       <FlipNav />
       <div className="h-55" />
     </div>
@@ -15,7 +16,7 @@ const FlipNavWrapper = () => {
 const FlipNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-white p-4 border-b-[1px] border-gray-200 flex items-center justify-between relative">
+    <nav className="bg-white p-4 border-b-[1px] border-gray-200 flex items-center justify-between relative" >
       <NavLeft setIsOpen={setIsOpen} />
       <NavRight />
       <NavMenu isOpen={isOpen} />
@@ -44,7 +45,7 @@ const NavLeft = ({ setIsOpen }) => {
       </motion.button>
       <Logo />
       <NavLink text="Home" />
-      <NavLink text="Rating" />
+      <NavLink text="Form" />
       <NavLink text="Chatbot" />
       <NavLink text="Testimonials" />
       <NavLink text="FAQ" />
@@ -53,13 +54,24 @@ const NavLeft = ({ setIsOpen }) => {
 };
  
 const NavLink = ({ text }) => {
+  const scrollToSectionWithOffset = (sectionId, offset = 150) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      const targetOffset = section.offsetTop - offset;
+      window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+    }
+  };
+
   return (
     <a
       href="#"
       rel="nofollow"
       className="hidden lg:block h-[30px] overflow-hidden font-medium"
     >
-      <motion.div whileHover={{ y: -30 }}>
+      <motion.div 
+      onClick={() => scrollToSectionWithOffset(text)}
+      whileHover={{ y: -30 }}>
         <span className="flex items-center h-[30px] text-gray-500">{text}</span>
         <span className="flex items-center h-[30px] text-indigo-600">
           {text}
