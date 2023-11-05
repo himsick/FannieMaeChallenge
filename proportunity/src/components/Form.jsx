@@ -10,9 +10,9 @@ const TerminalContact = () => {
     <section
       style={{
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80)",
+          "url(https://images.hdqwalls.com/wallpapers/hut-house-landscape-minimal-morning-4k-pj.jpg)",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center calc(100% + 130px)",
       }}
       className="px-4 py-12 bg-violet-600"
     >
@@ -37,7 +37,7 @@ const TerminalHeader = () => {
       <div className="w-3 h-3 rounded-full bg-yellow-500" />
       <div className="w-3 h-3 rounded-full bg-green-500" />
       <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
-        contact@hover.dev
+        Proportunity Evaluator
       </span>
     </div>
   );
@@ -94,7 +94,7 @@ const TerminalBody = ({ containerRef, inputRef }) => {
 const InitialText = () => {
   return (
     <>
-      <p>Hey there! We're excited to link 🔗</p>
+      <p>Hey there! Tell us more about yourself.</p>
       <p className="whitespace-nowrap overflow-hidden font-light">
         ------------------------------------------------------------------------
       </p>
