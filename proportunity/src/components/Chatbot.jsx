@@ -43,7 +43,7 @@ const Chatbot = () => {
     return (
         <>
             {/* Title container */}
-            <div className="title-container">
+            <div className="title-container" id = "Chatbot">
                 Proportunity Chatbot
             </div>
             
