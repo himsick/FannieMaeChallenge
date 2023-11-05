@@ -46,6 +46,7 @@ const NavLeft = ({ setIsOpen }) => {
       <Logo />
       <NavLink text="Home" />
       <NavLink text="Form" />
+      <NavLink text="Visuals" />
       <NavLink text="Suggestions" />
       <NavLink text="Testimonials" />
       <NavLink text="Chatbot" />

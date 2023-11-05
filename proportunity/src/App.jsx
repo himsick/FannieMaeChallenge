@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 //import Chatbot from './compnents/Chatbot';
 //import Footer from './compnents/Footer';
 import Form from './components/Form';
+import Graph from './components/Graph';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Suggestions from './components/Suggestions';
@@ -47,6 +48,7 @@ function App() {
       <Navbar />
       <Hero />
       <Form onFormSubmit={handleFormSubmit} />
+      <Graph />
       <Suggestions />
       <Testimonial />
       <Chatbot />

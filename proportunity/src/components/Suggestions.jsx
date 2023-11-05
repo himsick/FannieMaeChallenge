@@ -14,7 +14,7 @@ const BREAKPOINTS = {
  
 const BlogPostCarousel = () => {
   const [ref, { width }] = useMeasure();
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(-340);
  
   const CARD_BUFFER =
     width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
@@ -43,7 +43,7 @@ const BlogPostCarousel = () => {
       <div className="relative overflow-hidden p-4">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-center justify-between">
-            <h2 className="mb-4 text-4xl">Suggestions</h2>
+          <h3 className="mb-8 text-4xl font-semibold">Suggestions</h3>
  
             <div className="flex items-center gap-2">
               <button
