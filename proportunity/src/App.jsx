@@ -1,5 +1,5 @@
 // Setup
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
@@ -10,8 +10,21 @@ import TabsFAQ from './components/TabsFAQ';
 //import Footer from './components/Footer';
 
 // App Function
-const App = () =>
-{
+function App () {
+
+  const [data, setData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/data").then(
+      res => res.json()
+    ).then(
+      data => {
+        setData(data)
+        console.log(data)
+      }
+    )
+  }, [])
+
   return(
     <div>
       <Navbar />

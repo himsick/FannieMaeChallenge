@@ -1,8 +1,10 @@
 {
   "name": "proportunity",
   "private": true,
+  "proxy": "http://localhost:5173",
   "version": "0.0.0",
   "type": "module",
+ 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
