@@ -10,6 +10,7 @@ import Form from './components/Form';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Suggestions from './components/Suggestions';
+import Chatbot from './components/Chatbot';
 import TabsFAQ from './components/TabsFAQ';
 import Testimonial from './components/Testimonial';
 import { ScrollProvider } from './components/Scroll';
@@ -48,6 +49,7 @@ function App() {
       <Form onFormSubmit={handleFormSubmit} />
       <Suggestions />
       <Testimonial />
+      <Chatbot />
       <TabsFAQ />
       {isComplete && eligibility && (
         <div className="eligibility-results">
