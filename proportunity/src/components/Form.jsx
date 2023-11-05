@@ -39,7 +39,7 @@ const TerminalHeader = () => {
       <div className="w-3 h-3 rounded-full bg-yellow-500" />
       <div className="w-3 h-3 rounded-full bg-green-500" />
       <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
-        Proportunity Evaluator
+        Proportunity Form
       </span>
     </div>
   );
@@ -193,7 +193,7 @@ const Summary = ({ questions, setQuestions }) => {
       {complete ? (
         <p className="text-emerald-300">
           <FiCheckCircle className="inline-block mr-2" />
-          <span>Sent! We'll get back to you ASAP 😎</span>
+          <span>Sent!</span>
         </p>
       ) : (
         <div className="flex gap-2 mt-2">
@@ -290,43 +290,43 @@ export default TerminalContact;
 const QUESTIONS = [
   {
     key: "creditScore",
-    text: "To get started, could you share ",
-    postfix: "your credit score?",
+    text: "To get started, could you share your ",
+    postfix: "credit score?",
     complete: false,
     value: "",
   },
   {
     key: "loanAmount",
-    text: "Great! Now what's ",
-    postfix: "the amount of loan you're seeking?",
+    text: "Great! Now what's the ",
+    postfix: "amount of loan you're seeking?",
     complete: false,
     value: "",
   },
   {
     key: "appraisedValue",
-    text: "Thanks! And what's ",
-    postfix: "the appraised value of the property?",
+    text: "Thanks! And what's the ",
+    postfix: "appraised value of the property?",
     complete: false,
     value: "",
   },
   {
     key: "grossMonthlyIncome",
-    text: "Next, what's ",
-    postfix: "your gross monthly income?",
+    text: "Next, what's your ",
+    postfix: "gross monthly income?",
     complete: false,
     value: "",
   },
   {
     key: "totalMonthlyPayments",
-    text: "Alright, and ",
-    postfix: "your total monthly payments for debts like car payments, credit cards, student loans?",
+    text: "Alright, and your ",
+    postfix: "total monthly payments for debts like car payments, credit cards, student loans?",
     complete: false,
     value: "",
   },
   {
     key: "monthlyMortgagePayment",
-    text: "Lastly, what would be ",
-    postfix: "your estimated monthly mortgage payment?",
+    text: "Lastly, what would be your ",
+    postfix: "estimated monthly mortgage payment?",
     complete: false,
     value: "",
   },

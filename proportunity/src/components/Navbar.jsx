@@ -46,9 +46,9 @@ const NavLeft = ({ setIsOpen }) => {
       <Logo />
       <NavLink text="Home" />
       <NavLink text="Form" />
-      <NavLink text="Chatbot" />
       <NavLink text="Suggestions" />
       <NavLink text="Testimonials" />
+      <NavLink text="Chatbot" />
       <NavLink text="FAQ" />
     </div>
   );
@@ -65,7 +65,7 @@ const NavLink = ({ text }) => {
   };
 
   return (
-    <a
+    <button
       href="#"
       rel="nofollow"
       className="hidden lg:block h-[30px] overflow-hidden font-medium"
@@ -78,7 +78,7 @@ const NavLink = ({ text }) => {
           {text}
         </span>
       </motion.div>
-    </a>
+    </button>
   );
 };
  
